@@ -16,7 +16,7 @@ def main():
         print("> ", end=" ")
         cmd = homeCommand.readCommand()
         parseCMD = homeCommand.parseCommand(cmd)
-        returnCode = homeCommand.executeCommand(parseCMD)
+        returnCode = homeCommand.executeCommand(parseCMD, name)
         
         gameIsActive = returnCode
 

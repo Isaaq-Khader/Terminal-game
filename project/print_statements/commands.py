@@ -1,5 +1,5 @@
-def exitCommand():
-    print("\nThanks for playing!\n")
+def exitCommand(name):
+    print("\nThanks for playing, " + name + "!\n")
 
 def battleCommand():
     print("Let's battle!\n")

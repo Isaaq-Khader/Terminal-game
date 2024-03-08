@@ -1,5 +1,6 @@
 import numpy as np
 from project.print_statements import commands as com
+from project.battle import battle_master as bm
 
 # STATUS CODES
 EXIT = 0
@@ -16,14 +17,15 @@ def parseCommand(cmd):
     parse = cmd.split()
     return parse
 
-def executeCommand(cmd):
+def executeCommand(cmd, player_name):
     for c in cmd:
         match c:
             case "exit":
-                com.exitCommand()
+                com.exitCommand(player_name)
                 return EXIT
             case "battle":
                 com.battleCommand()
+                bm.init_battle(player_name)
                 return BATTLE
             case "help":
                 com.helpCommand()
