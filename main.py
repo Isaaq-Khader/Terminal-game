@@ -13,6 +13,7 @@ def main():
     gameIsActive = True
 
     while(gameIsActive):
+        print("> ", end=" ")
         cmd = homeCommand.readCommand()
         parseCMD = homeCommand.parseCommand(cmd)
         returnCode = homeCommand.executeCommand(parseCMD)

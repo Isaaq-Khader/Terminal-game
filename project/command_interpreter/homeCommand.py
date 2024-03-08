@@ -1,11 +1,12 @@
 import numpy as np
 from project.print_statements import commands as com
 
-
+# STATUS CODES
 EXIT = 0
 BATTLE = 1
 HELP = 2
 UNKNOWN = 3
+NO_COMMAND = 4
 
 def readCommand():
     cmd = input()
@@ -30,3 +31,4 @@ def executeCommand(cmd):
             case _:
                 com.unknownCommand()
                 return UNKNOWN
+    return NO_COMMAND

@@ -5,7 +5,7 @@ def battleCommand():
     print("Let's battle!\n")
 
 def helpCommand():
-    print("Options:\n")
+    print("\nOptions:")
     print("battle")
     print("exit")
     print("help")
