@@ -1,4 +1,5 @@
 import numpy as np
+from project.print_statements import commands as com
 
 def readCommand():
     cmd = input()
@@ -12,13 +13,14 @@ def executeCommand(cmd):
     for c in cmd:
         match c:
             case "exit":
-                print("exiting!")
+                com.exitCommand()
                 return 0
             case "battle":
-                print("let's battle!!!")
+                com.battleCommand()
                 return 1
             case "help":
+                com.exitCommand()
                 return 1
             case _:
-                print("i don't know that command!")
+                com.unknownCommand()
                 return 2
