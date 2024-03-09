@@ -1,4 +1,5 @@
 from enum import Enum
+from project.battle import battle_classes as bc
 from project.print_statements import battle as p
 from project.print_statements import commands as com
 from project.player_name import name_player as response
@@ -60,13 +61,14 @@ def init_battle(name):
             p.unknown_difficulty()
             difficulty_status = IN_PROGRESS
     
-    # add class selection here
-            
+    # add fighting class selection here
+    fighting_class = bc.Fighter   
+    player_info = bc.Player(name, fighting_class)     
     # add option for mode (such as RANDOM BATTLE or CUSTOM BATTLE)
             
     p.all_set(name)
-    return difficulty
+    return difficulty, player_info
 
-def battle_engine(settings):
+def battle_engine(settings, player):
     
     return 0
