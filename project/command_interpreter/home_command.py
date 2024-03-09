@@ -1,6 +1,6 @@
 import numpy as np
-from project.print_statements import commands as com
 from project.battle import battle_master as bm
+from project.print_statements import commands as com
 
 # STATUS CODES
 EXIT = 0
@@ -10,6 +10,7 @@ UNKNOWN = 3
 NO_COMMAND = 4
 
 def readCommand():
+    com.input_command()
     cmd = input()
     return cmd
 

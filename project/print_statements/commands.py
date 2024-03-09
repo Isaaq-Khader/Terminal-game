@@ -13,3 +13,6 @@ def helpCommand():
 
 def unknownCommand():
     print("UNKNOWN COMMAND!\n")
+
+def input_command():
+    print("> ", end=" ")
