@@ -62,7 +62,11 @@ def init_battle(name):
     
     # add class selection here
             
-    # add option for other parameters like custom mode?
+    # add option for mode (such as RANDOM BATTLE or CUSTOM BATTLE)
             
     p.all_set(name)
+    return difficulty
+
+def battle_engine(settings):
+    
     return 0

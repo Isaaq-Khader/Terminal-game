@@ -26,7 +26,8 @@ def executeCommand(cmd, player_name):
                 return EXIT
             case "battle":
                 com.battleCommand()
-                bm.init_battle(player_name)
+                settings = bm.init_battle(player_name)
+                bm.battle_engine(settings)
                 return BATTLE
             case "help":
                 com.helpCommand()
